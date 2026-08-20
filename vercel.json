@@ -1,6 +1,6 @@
  { "rewrites": [
     {
         "source": "/(,*)",
-        "destination": "/flower.html"
+        "destination": "/index.html"
     }
  ]}
