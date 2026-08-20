@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>For you</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ===== background stack ===== -->
+<div class="bg-aurora" aria-hidden="true">
+  <span class="aur aur--1"></span>
+  <span class="aur aur--2"></span>
+  <span class="aur aur--3"></span>
+</div>
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="bg-photos" id="bgPhotos" aria-hidden="true"></div>
+<div class="bg-stars" id="bgStars" aria-hidden="true"></div>
+<div class="bg-vignette" aria-hidden="true"></div>
+
+<!-- ===== 1. HERO ===== -->
+<header class="hero" id="hero">
+  <div class="hero__frame">
+    <p class="hero__eyebrow">For you, My Sweet Girlfriend Alifianna</p>
+    <h1 class="hero__title">
+      <span class="w">How</span> <span class="w">much</span> <span class="w">I</span>
+      <span class="w">love</span> <span class="w">you</span> <span class="w"><em>too</em></span>
+    </h1>
+    <div class="hero__rule"></div>
+    <p class="hero__sub">"a small place I built, so you know" - Kenneth</p>
+  </div>
+  <button class="hero__cue" id="scrollCue" aria-label="Scroll down">
+    <span>begin</span>
+    <span class="hero__arrow"></span>
+  </button>
+</header>
+
+<!-- ===== 2. OPENING ===== -->
+<section class="section section--narrow">
+  <div class="panel reveal">
+    <p class="quote">"In this vast digital space, you became my safest place."</p>
+    <p class="label label--rose">&mdash; you, in your presentation</p>
+    <div class="rule"></div>
+    <p class="lead">You made me a whole presentation on how much you love me.</p>
+    <p>I couldn't just say "thanks" back. So I built you one.</p>
+    <p class="muted">Scroll slowly, okay?</p>
+  </div>
+</section>
+
+<!-- ===== 3. THE REPLY ===== -->
+<section class="section">
+  <p class="label reveal">my answer</p>
+  <h2 class="display reveal">Why it's you</h2>
+
+  <div class="whys">
+    <article class="why reveal">
+      <span class="why__num">01</span>
+      <h3>Why is it you?</h3>
+      <p>Because you're the person my noisy days go quiet around. You care about people even when you're the one hurting.. I've watched you do it. You never perform for anyone; you're just fully, honestly yourself, and that's the thing I look forward to most.</p>
+    </article>
+    <article class="why reveal">
+      <span class="why__num">02</span>
+      <h3>Why did I fall for you?</h3>
+      <p>I didn't notice it happening. It was the small things checking if you were online first, a normal day feeling better once you were in it. By the time I understood what it was, it had already been true for a long while.</p>
+    </article>
+    <article class="why reveal">
+      <span class="why__num">03</span>
+      <h3>Why is it so romantic?</h3>
+      <p>Because none of it was convenient. We had screens and distance and bad timing, and we still chose each other anyway. Something that survives all of that isn't an accident.</p>
+    </article>
+    <article class="why reveal">
+      <span class="why__num">04</span>
+      <h3>Why I chose you</h3>
+      <p>You called me your safest place. I need you to know it goes both ways. Wherever you are is where I stop bracing for something to go wrong. That's not a small thing. That's the whole thing.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ===== 4. GALLERY ===== -->
+<section class="section section--gallery">
+  <p class="label reveal">the gallery</p>
+  <h2 class="display reveal">Every photo you sent me</h2>
+  <p class="gallery__intro reveal">I kept every single one so I could look at you whenever I wanted.</p>
+  <div class="gallery" id="gallery"></div>
+  <p class="muted center reveal" id="galleryNote"></p>
+</section>
+
+<!-- lightbox -->
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lightbox__close" id="lbClose" aria-label="Close">&times;</button>
+  <button class="lightbox__nav lightbox__nav--prev" id="lbPrev" aria-label="Previous">&#8249;</button>
+  <figure class="lightbox__stage">
+    <img id="lbImg" alt="" />
+    <figcaption id="lbCap"></figcaption>
+  </figure>
+  <button class="lightbox__nav lightbox__nav--next" id="lbNext" aria-label="Next">&#8250;</button>
+</div>
+
+<!-- ===== 5. ARCADE ===== -->
+<section class="section">
+  <p class="label reveal">intermission</p>
+  <h2 class="display reveal">Play with me a little</h2>
+  <p class="center muted reveal">Before the last thing pick one Fia.</p>
+  <div class="arcade reveal">
+    <button class="game-card" data-game="catch">
+      <span class="game-card__ico">&#9825;</span>
+      <span class="game-card__name">Catch the hearts</span>
+      <span class="game-card__hint">don't let them fall honey</span>
+    </button>
+    <button class="game-card" data-game="memory">
+      <span class="game-card__ico">&#9671;</span>
+      <span class="game-card__name">Memory match</span>
+      <span class="game-card__hint">find the pairs</span>
+    </button>
+    <button class="game-card" data-game="quiz">
+      <span class="game-card__ico">&#9998;</span>
+      <span class="game-card__name">Do you know me?</span>
+      <span class="game-card__hint">how well, really</span>
+    </button>
+    <button class="game-card" data-game="reveal">
+      <span class="game-card__ico">&#10022;</span>
+      <span class="game-card__name">Hidden message</span>
+      <span class="game-card__hint">uncover each word</span>
+    </button>
+  </div>
+  <div class="stage" id="gameStage" hidden>
+    <button class="stage__close" id="gameClose" aria-label="Close">&times;</button>
+    <div id="gameBody"></div>
+  </div>
+</section>
+
+<!-- ===== 6. TRIBUTE ===== -->
+<section class="section section--tribute">
+  <div class="tribute reveal">
+    <p class="label label--rose">the last thing</p>
+    <h2 class="display display--lg">How amazing you are</h2>
+    <p>You have this way of caring about people that doesn't ask for anything back. You noticed me when I wasn't trying to be noticed. You made a whole presentation for someone who would have been happy with a text message and that is just who you are, and I don't think you realize how rare it is.</p>
+    <p>You are braver than you think. You said the offline world felt loud and intimidating, and then you went and said the hardest thing out loud anyway. I know what that costs. I've been holding onto it since.</p>
+    <p>I'm not going to pretend I have your way with words. But if you ever wonder whether you're too much, or not enough, or whether any of this was one-sided and read this again. You are the best part of my day, every day, and I would choose you again every single time.</p>
+  </div>
+</section>
+
+<!-- ===== 7. CLOSING ===== -->
+<section class="section section--closing">
+  <div class="closing reveal">
+    <p class="label label--rose">and so</p>
+    <p class="closing__big">I love you so much more,<br /><em>Alifianna</em></p>
+    <button class="btn" id="replay">back to the top</button>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
